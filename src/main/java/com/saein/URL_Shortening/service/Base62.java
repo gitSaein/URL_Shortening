@@ -1,5 +1,8 @@
 package com.saein.URL_Shortening.service;
-
+/**
+ * @author saein
+ *
+ */
 public class Base62 {
 
 	public String encoding(String param) {

@@ -16,7 +16,6 @@ shortening url 요청 시, 원래 URL로 리다이렉트
 4. 문제해결전략
  original url 입력 받고 -> [Base62 encoding] -> url shortening 발급 후 저장
   url_shortening 입력 -> [Base62 decoding] -> DB에서 찾아서 원래 url로 리다이렉트
-  url_shortening 입력 -> [Base62 decoding] -> DB에 없으면, shortening url 만드는 페이지로 리다이렉트
 
 5.프로젝트 빌드방법
 
