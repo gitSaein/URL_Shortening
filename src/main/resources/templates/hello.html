@@ -17,12 +17,18 @@
   <p class="lead">URL shortener to reduce a long link. Use our tool to shorten links and then share them.</p>
   <hr class="my-4">
   
-  	<div class="input-group mb-3">
-  	  <form action="#" th:action="@{/create}" th:object="${url}" method="post">
-		<label>Original URL</label><br/>
-		<input type="text" th:field="*{origin}" id="origin" class="form-control" placeholder="Original URL" aria-label="Original URL" aria-describedby="button-addon2" />
-		<div class="input-group-append">>
-		  <button class="btn btn-primary" type="submit" id="button-addon2">Create</button>
+  	<div class="input-group row">
+  	  <form action="#" th:action="@{/create}" th:object="${url}" th:method="post">
+		  <div class="form-group row">
+		    <div class="col-sm-9">
+				<input type="text" th:field="*{originUrl}" id="originUrl" name="originUrl" class="form-control" placeholder="Original URL" aria-label="Original URL" aria-describedby="button-addon2" />
+		    </div>
+		    <div class="col-sm-3">
+		     <button type="submit" class="btn btn-primary">Create</button>
+		     </div>
+		  </div>
+		<div class="input-group-append">
+		 
 		</div>
 	  </form>
 	</div>

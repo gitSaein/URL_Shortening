@@ -22,8 +22,9 @@ public class UrlRepositoryTest {
 	
 	@Test
 	public void testUrlRepository() {
-		Url url = new Url("originalurl", "shorturl");
-		
+		Url url = new Url();
+		url.setOriginUrl("origin");
+		url.setShortUrl("shorturl");
 		urlRepository.save(url);
 		assertEquals(1, urlRepository.count());
 		

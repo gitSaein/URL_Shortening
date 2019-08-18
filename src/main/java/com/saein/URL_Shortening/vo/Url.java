@@ -29,9 +29,5 @@ public class Url {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdDate;
 	
-	public Url(String originUrl,String shortUrl) {
-		this.originUrl = originUrl;
-		this.shortUrl = shortUrl;
-	}
 	
 }
