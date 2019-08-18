@@ -18,7 +18,7 @@
   <hr class="my-4">
   
   	<div class="input-group row">
-  	  <form action="#" th:action="@{/create}" th:object="${url}" th:method="post">
+  	  <form action="#" th:action="@{/}" th:object="${vo}" th:method="post" style="width:100%">
 		  <div class="form-group row">
 		    <div class="col-sm-9">
 				<input type="text" th:field="*{originUrl}" id="originUrl" name="originUrl" class="form-control" placeholder="Original URL" aria-label="Original URL" aria-describedby="button-addon2" />
@@ -34,10 +34,10 @@
 	</div>
 	<dl class="row">
 	  <dt class="col-sm-3">original URL</dt>
-	  <dd class="col-sm-9"><p class="text-secondary">http://sdkfjklsdfj </p></dd>
+	  <dd class="col-sm-9"><p class="text-secondary" th:text="${vo.originUrl}"></p></dd>
 	  
 	  <dt class="col-sm-3">shortening URL</dt>
-	  <dd class="col-sm-9"><p class="text-primary">http:./</p></dd>
+	  <dd class="col-sm-9"><a href="#" th:text="${vo.shortUrl}">Short URL</a></dd>
  	</dl>
 </div>
   <!--  -->

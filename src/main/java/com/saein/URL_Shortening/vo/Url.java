@@ -19,15 +19,7 @@ import lombok.Data;
 public class Url {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
-	
+	private Integer key;
 	private String originUrl;
-	
-	@Column(length = 8)
 	private String shortUrl;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdDate;
-	
-	
 }
