@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,19 +16,23 @@
   <h1 class="display-4">URL Shortener</h1>
   <p class="lead">URL shortener to reduce a long link. Use our tool to shorten links and then share them.</p>
   <hr class="my-4">
-  <dl class="row">
-  <div class="input-group mb-3">
-		  <input type="text" class="form-control" placeholder="Original URL" aria-label="Original URL" aria-describedby="button-addon2">
-		  <div class="input-group-append">
-		    <button class="btn btn-primary" type="button" id="button-addon2">Create</button>
-		  </div>
+  
+  	<div class="input-group mb-3">
+  	  <form action="#" th:action="@{/create}" th:object="${url}" method="post">
+		<label>Original URL</label><br/>
+		<input type="text" th:field="*{origin}" id="origin" class="form-control" placeholder="Original URL" aria-label="Original URL" aria-describedby="button-addon2" />
+		<div class="input-group-append">>
+		  <button class="btn btn-primary" type="submit" id="button-addon2">Create</button>
 		</div>
+	  </form>
+	</div>
+	<dl class="row">
 	  <dt class="col-sm-3">original URL</dt>
 	  <dd class="col-sm-9"><p class="text-secondary">http://sdkfjklsdfj </p></dd>
 	  
 	  <dt class="col-sm-3">shortening URL</dt>
 	  <dd class="col-sm-9"><p class="text-primary">http:./</p></dd>
-  </dl>
+ 	</dl>
 </div>
   <!--  -->
    
