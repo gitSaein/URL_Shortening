@@ -1,27 +1,35 @@
 package com.saein.URL_Shortening.vo;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.Data;
 
 @Entity
 @Data
-public class UrlVo {
+@Table(name = "URL")
+public class Url {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	
 	private String originUrl;
 	
 	@Column(length = 8)
 	private String shortUrl;
 	
-	private Boolean is;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createdDate;
 	
-	public UrlVo(String originUrl,String shortUrl) {
+	public Url(String originUrl,String shortUrl) {
 		this.originUrl = originUrl;
 		this.shortUrl = shortUrl;
 	}
