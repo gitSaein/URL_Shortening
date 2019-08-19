@@ -47,7 +47,7 @@ URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL�
   **실행방벙**
   ```
   1. UrlShorteningApplication.class에서 'run as>spring boot app'  
-  2. 도메인 창에  localhost 입력
+  2. 도메인 창에  http://localhost/ 입력
   ```
   
   **테스트**
