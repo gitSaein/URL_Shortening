@@ -1,10 +1,10 @@
 # URL_Shortening
-# 1. 기능
+## 1. 기능
 
 URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL로 리다이렉트 
 
 
-# 2. 프로젝트 환경 
+## 2. 프로젝트 환경 
 ```
 * back-end: spring boot/maven
 * front-end: thymeleaf
@@ -13,7 +13,7 @@ URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL�
 * 알고리즘: Base62 
 ```
 
-# 3. 문제해결전략
+## 3. 문제해결전략
 
 
  **에러처리**
@@ -36,14 +36,14 @@ URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL�
   
                 shortening key 값이 c이면, 2*62^0     -> key = 2
 ```
-# 4.프로젝트 빌드방법
+## 4.프로젝트 빌드방법
   maven
   
   
-# 5.프로젝트 실행 및 테스트
+## 5.프로젝트 실행 및 테스트
   
   
-  **실행방**
+  **실행방법**
   ```
   1. UrlShorteningApplication.class에서 'run as>spring boot app'  
   2. 도메인 창에  localhost 입력
