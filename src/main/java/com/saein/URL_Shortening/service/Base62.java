@@ -6,16 +6,20 @@ package com.saein.URL_Shortening.service;
  *
  */
 public class Base62 {
-	private static char[] Base62= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
+	private static char[] Base62= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
 
-	public static String encode(int param) {
+	public static String encoding(int param) throws Exception {
         final StringBuilder sb = new StringBuilder();
         do {
             int i = param % Base62.length;
             sb.append(Base62[i]);
             param /= Base62.length;
         } while (param > 0);
-        return sb.toString();
+        if(sb.length() <= 8) {
+        	return sb.toString();
+        }else {
+        	throw new Exception("URL Shortening Key 값이 8character를 초과햇습니다.");
+        }
     }
 	
     public static int decoding(String value) {

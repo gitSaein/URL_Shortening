@@ -2,8 +2,6 @@ package com.saein.URL_Shortening;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.List;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +24,7 @@ public class UrlRepositoryTest {
 		url.setOriginUrl("origin");
 		url.setShortUrl("shorturl");
 		urlRepository.save(url);
-		assertEquals(1, urlRepository.count());
+		assertEquals("origin", urlRepository.findByOriginUrl("origin").getOriginUrl());
 		
 	}
 

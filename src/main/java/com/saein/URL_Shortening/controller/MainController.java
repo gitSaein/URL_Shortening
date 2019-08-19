@@ -27,14 +27,14 @@ public class MainController {
 	}
 	
 	@PostMapping
-	public String createUrl(ModelMap modelMap, Url url) {
+	public String createUrl(ModelMap modelMap, Url url) throws Exception {
 		if(urlRepository.findByOriginUrl(url.getOriginUrl()) == null) {
 			urlRepository.save(url);
 		}
 		
 		url = urlRepository.findByOriginUrl(url.getOriginUrl());
 		int key = url.getKey();
-	 	url.setShortUrl("http://localhost/" + Base62.encode(key));
+	 	url.setShortUrl("http://localhost/" + Base62.encoding(key));
 	 	modelMap.addAttribute("vo", url);
 	 	return "hello";
 	}
