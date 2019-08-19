@@ -17,6 +17,8 @@ URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL�
 
 
  **에러처리**
+ 
+ 
  URL Shortening Key가 8 character초과할 경우 에러처리.
  
 
@@ -48,4 +50,6 @@ URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL�
   ```
   
   **테스트**
+  
+  
   @SpringBootTest를 사용한 JUnit 통합 테스트로 MVC test, 알고리즘 테스트 진행
