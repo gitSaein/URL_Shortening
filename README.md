@@ -7,11 +7,21 @@ shortening url 요청 시, 원래 URL로 리다이렉트
 
 3. 프로젝트 환경 
 **back-end**: spring boot/maven
+
+
 **front-end**: thymeleaf
-**db**: h2
+
+
+**DB**: h2
+
+**ORM**: JPA
+
+
 **알고리즘**: Base62 
-  -- encoding : Encode base 10 integer to base 62 char from alphabet above
-  -- decoding : Decode base 62 char from alphabet above to base 10 integer
+
+
+  encoding : Encode base 10 integer to base 62 char from alphabet above
+  decoding : Decode base 62 char from alphabet above to base 10 integer
 
 4. 문제해결전략
  original url 입력 받고 -> [Base62 encoding] -> url shortening 발급 후 저장
