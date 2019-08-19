@@ -24,17 +24,15 @@ URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL�
   ```
    base62 테이블은 a-z-A-Z-0-9의 순서로 이루어짐.
  
- 
    *encoding 계산법: 
    integer형태로 DB에 저장된 origin url의  key값으로  shortening key url을 구성한다.
  
- 
-                key 값이 2이면, 2/62 -->몫:0 나머지:2   -> localhost/c
+              62진법: key 값이 2이면, 2/62 -->몫:0 나머지:2  base62테이블 {0:a}{1:b}{2:c} -> localhost/c
                 
    *decoding 계산법: 
    shortening key을 decoding 해서 origin url의 key값을 찾는다.
   
-                shortening key 값이 c이면, 2*62^0     -> key = 2
+              62진법: shortening key 값이 c이면, 2*62^0     -> key = 2
 ```
 ## 4.프로젝트 빌드방법
   maven
