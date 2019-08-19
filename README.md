@@ -6,18 +6,19 @@ webapp URL 입력 폼 제공 -> shortening url 출력( URL Shortening Key 길이
 shortening url 요청 시, 원래 URL로 리다이렉트 
 
 3. 프로젝트 환경 
-**back-end**: spring boot/maven
+back-end: spring boot/maven
 
 
-**front-end**: thymeleaf
+front-end: thymeleaf
 
 
-**DB**: h2
-
-**ORM**: JPA
+DB: h2
 
 
-**알고리즘**: Base62 
+ORM: JPA
+
+
+알고리즘: Base62 
 
 
   encoding : Encode base 10 integer to base 62 char from alphabet above
