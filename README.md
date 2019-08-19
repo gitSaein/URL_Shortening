@@ -1,5 +1,4 @@
 # URL_Shortening
-======================
 # 1. 기능
 
 URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL로 리다이렉트 
@@ -44,7 +43,7 @@ URL을 입력받아 짧게 줄이고, 줄인 URL을 입력받으면 원래 URL�
 # 5.프로젝트 실행 및 테스트
   
   
-  **실행방벙**
+  **실행방**
   ```
   1. UrlShorteningApplication.class에서 'run as>spring boot app'  
   2. 도메인 창에  localhost 입력
